@@ -1,0 +1,2 @@
+# HAI
+ Humanized text generator
