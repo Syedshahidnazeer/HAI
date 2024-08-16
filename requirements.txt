@@ -3,4 +3,3 @@ streamlit_lottie
 google.generativeai
 requests
 pyyaml
-time
