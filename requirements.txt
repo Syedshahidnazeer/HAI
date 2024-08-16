@@ -2,5 +2,5 @@ streamlit
 streamlit_lottie
 google.generativeai
 requests
-yaml
+pyaml
 time
