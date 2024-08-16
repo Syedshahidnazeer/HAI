@@ -51,6 +51,21 @@ st.markdown("""
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: black; /* Changed to black for better visibility */
     }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+        .stApp {
+            background-size: cover; /* Cover background on smaller screens */
+        }
+        .stTextInput > div > div > input,
+        .stTextArea > div > div > textarea {
+            padding: 8px; /* Reduce padding for smaller screens */
+        }
+        .stButton>button {
+            padding: 8px 15px; /* Adjust padding for smaller buttons */
+        }
+    }
+
     .stTextInput > div > div > input {
         background-color: rgba(255, 255, 255, 0.1);
         color: black; /* Changed to black for better visibility */
@@ -80,11 +95,10 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# Sidebar
 with st.sidebar:
     st.title("💡 Writing Tips")
     tips_lottie = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_jR229r.json")
-    st_lottie(tips_lottie, key="tips_lottie", height=200)
+    st.lottie(tips_lottie, key="tips_lottie", height=200)
     st.write("""
     1. Use contractions (e.g., "don't" instead of "do not")
     2. Incorporate casual phrases and idioms
@@ -92,6 +106,13 @@ with st.sidebar:
     4. Add personal anecdotes or examples
     5. Include rhetorical questions
     6. Use emotive language where appropriate
+    """)
+
+    st.markdown("""
+    ---
+    ### 🌟 Discover More
+    For more insights and to see my work in action, visit my portfolio site: [https://syed-shahid-nazeer-portfolio.streamlit.app/#education]
+    I look forward to connecting with you and exploring new opportunities together!
     """)
 
 # Main content
